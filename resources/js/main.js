@@ -12,6 +12,8 @@ let renderCurrentTime = () => {
 }
 
 let renderUser = (event) => {
+	//HTML 요소의 기본 이벤트 중지
+	event.preventDefault();
 	console.dir('renderUser : ' + event.target.className);
    let input = document.querySelector('.inp_username').value;
    localStorage.setItem('username', input);   
@@ -19,6 +21,8 @@ let renderUser = (event) => {
 }
 
 let registSchedule = (event) => {
+	//HTML 요소의 기본 이벤트 중지
+	event.preventDefault();
 	console.dir('renderUser : ' + event.target.className);
    let prevTodo = localStorage.getItem('todo');
    let input = document.querySelector('.inp_todo').value;
